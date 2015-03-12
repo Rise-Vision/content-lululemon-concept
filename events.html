@@ -57,7 +57,7 @@
 </google-sheets>
     
 <!--Header-->      
-<div id="header">UPCOMING EVENTS</div>
+<!--<div id="header">UPCOMING EVENTS</div>-->
  
 <!--Text Transition-->  
 <div  id="content">
@@ -73,9 +73,17 @@
 <!-- Information from Spreadsheet Rows -->
                 <template repeat="{{rows}}">
                     <div class="slides">
-                        <h2 class="date">{{gsx$date.$t}}</h2>
                         <h2 class="event">{{gsx$event.$t}}</h2>
                         <p class="desc">{{gsx$description.$t}}</p>
+						<p class="date">{{gsx$date.$t}}</p>
+						<p class="time1">{{gsx$time1.$t}}</p>
+						<p class="time2">{{gsx$time2.$t}}</p>
+						<p class="contact">{{gsx$contact.$t}}</p>
+						<p class="email">{{gsx$email.$t}}</p>
+						<p class="phone">{{gsx$phone.$t}}</p>
+						<p class="cost">{{gsx$cost.$t}}</p>
+						<p class="type">{{gsx$type.$t}}</p>
+						<p class="website">{{gsx$website.$t}}</p>
                     </div>
                  </template>
             </template>
