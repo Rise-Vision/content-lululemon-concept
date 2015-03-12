@@ -33,7 +33,7 @@
 <link rel="stylesheet" type="text/css" href="events.css">
     
 <!--Fonts-->
-<link href='http://fonts.googleapis.com/css?family=Oswald:700,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 <!--Web Components-->    
@@ -46,7 +46,7 @@
 <body id="gradient" unresolved>
     <!--Background Animation-->
     <div id="background">
-        <img src="images/background-buildings-1920.jpg">
+        <img src="images/yoga-final.jpg">
     </div>
     <!-- Published Spreadsheet Details -->
 <google-sheets id="sheet" 
@@ -73,16 +73,30 @@
 <!-- Information from Spreadsheet Rows -->
                 <template repeat="{{rows}}">
                     <div class="slides">
-                        <h2 class="event">{{gsx$event.$t}}</h2>
+                        <p class="event">{{gsx$event.$t}}</p>
                         <p class="desc">{{gsx$description.$t}}</p>
-						<p class="date">{{gsx$date.$t}}</p>
-						<p class="time1">{{gsx$time1.$t}}</p>
-						<p class="time2">{{gsx$time2.$t}}</p>
-						<p class="contact">{{gsx$contact.$t}}</p>
-						<p class="email">{{gsx$email.$t}}</p>
-						<p class="phone">{{gsx$phone.$t}}</p>
-						<p class="cost">{{gsx$cost.$t}}</p>
-						<p class="type">{{gsx$type.$t}}</p>
+						<table style="width:100%">
+						  <tr>
+							<td><p class="date"><span class="opacity">date:</span> {{gsx$date.$t}}</p></td>
+							<td><p class="time1"><span class="opacity">start:</span> {{gsx$time1.$t}}</p></td> 
+							<td><p class="time2"><span class="opacity">end:</span> {{gsx$time2.$t}}</p></td>
+						  </tr>
+						  <tr>
+							<td><p class="contact"><span class="opacity">contact:</span> {{gsx$contact.$t}}</p></td>
+							<td><p class="email"><span class="opacity">email:</span> {{gsx$email.$t}}</p></td> 
+							<td><p class="phone"><span class="opacity">phone:</span> {{gsx$phone.$t}}</p></td>
+						  </tr>
+							
+						</table>
+						
+						<table style="width:50%;margin-left:25%;">
+						  <tr>
+							<td><p class="cost"><span class="opacity">cost:</span> ${{gsx$cost.$t}}</p></td>
+							<td><p class="type"><span class="opacity">type:</span> {{gsx$type.$t}}</p></td> 
+						  </tr>
+					
+						</table>
+					
 						<p class="website">{{gsx$website.$t}}</p>
                     </div>
                  </template>
@@ -94,20 +108,20 @@
 </div>
     
 <!--Logo-->      
-<div  id="logo">
+<!--<div  id="logo">
     <img src="images/sample-logo.png"/>
-</div>
+</div>-->
 
 <!--Footer Icons-->   
 <!--Github Icon-->
-<div id="github">
-    <a type="button" id="gitbtn" href="http://github.com/Rise-Vision/content-templates/tree/master/events" target="_blank">Contribute <i class="fa fa-github fa-lg "></i></a>
-</div>
+<!--<div id="github">
+    <a type="button" id="gitbtn" href="http://github.com/Rise-Vision/content-templates/tree/master/events" target="_blank"><i class="fa fa-github fa-lg "></i></a>
+</div>-->
     
 <!--Rise Icon-->
-<div id="rise">
+<!--<div id="rise">
     <a href="http://www.risevision.com/" target="_blank"><img id="risebtn" src="images/rise-icon.png"/></a>
-</div>
+</div>-->
 </body> 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="script.js"></script>
