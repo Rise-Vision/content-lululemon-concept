@@ -11,7 +11,7 @@ html {
 body {
 	font-family: 'Oswald', sans-serif;
 	font-size:2vw;
-	background-color: #000;
+	background-color: #323341;
 }
 
 /* header text */
@@ -36,7 +36,7 @@ body {
     width:100%;
     height:50%;
     left:0%;
-    top:8vw;
+    top:10vw;
     z-index:3;
     position:absolute;
 	-webkit-transform: translateZ(0);
@@ -46,6 +46,7 @@ table {
 	color:white;
 	font-size:3vw;
 	font-weight: 300;
+	line-height: 3vw;
 	
 }
 
@@ -105,7 +106,7 @@ td {
 
 .slides:first-of-type {
 	left:125%;
-	opacity:0.3;
+	opacity:0;
 	-webkit-animation: slide3Animation 30s ease-in-out infinite;
 	-webkit-perspective: 1000;
 }
@@ -114,7 +115,7 @@ td {
 
 .slides:nth-of-type(3n) {
 	left:-25%;
-	opacity: 0.3;
+	opacity: 0;
 	-webkit-animation: slide1Animation 30s ease-in-out infinite;
 	-webkit-perspective: 1000;
 	
@@ -130,19 +131,43 @@ td {
 	-webkit-perspective: 1000;
 }
 
-    
+
 #logo {
-    width:25%;
+    width:30%;
     height:10%;
-    left:70%;
-    top:90%;
+    left:3%;
+    top:5%;
     z-index:1;
     position:absolute;
+	z-index: 99;
 }
 
 #logo img{
     width:100%;
     height:auto;
+	z-index: 99;
+}
+
+#qrcode {
+    width:8%;
+    height:8%;
+    right:3%;
+    bottom:15%;
+    z-index:1;
+    position:absolute;
+}
+
+#qrcode img{
+    width:100%;
+    height:auto;
+}
+
+.qrtext {
+	font-size:1.3vw;
+	text-align: center;
+	padding-top:.5vw;
+	color:#fff;
+	font-weight: 200;
 }
 
 /* background animation */
@@ -158,13 +183,13 @@ td {
 	overflow: hidden;
 	position: relative;
 	text-align: center;
-	opacity:.4;
+	opacity:.25;
 	
 }
 
 #background img {
     min-width:100%;
-	-webkit-animation-duration: 275s;
+	-webkit-animation-duration: 205s;
     -webkit-animation-name: slidein;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
@@ -173,71 +198,71 @@ td {
 /*Keyframe animation for slide 1*/
 
 @-webkit-keyframes "slide1Animation" {
- 20% {left:-25%;opacity:0.2;}
- 25% {left:-100%; opacity:0.2;}
+ 20% {left:-25%;opacity:0;}
+ 25% {left:-100%; opacity:0;}
  40% {left:-100%;opacity:0}
  45% {left:200%;opacity:0}
- 50% {left:125%;opacity:0.2;}
- 70% {left:125%;opacity:0.2;}
+ 50% {left:125%;opacity:0;}
+ 70% {left:125%;opacity:0;}
  75% {left:50%;opacity:1;}
  95% {left:50%;opacity:1;}
- 100% {left:-25%;opacity:0.2;}
+ 100% {left:-25%;opacity:0;}
 }
 
 /*Keyframe animation for slide 2*/
 
 @-webkit-keyframes "slide2Animation" {
  20% {left:50%;opacity:1;}
- 25% {left:-25%; opacity:0.2;}
- 45% {left:-25%;opacity:0.2;}
- 50% {left:-100%;opacity:0.2;}
+ 25% {left:-25%; opacity:0;}
+ 45% {left:-25%;opacity:0;}
+ 50% {left:-100%;opacity:0;}
  55% {left:-100%;opacity:0;}
  70% {left:200%;opacity:0;}
- 75% {left:125%;opacity:0.2;}
- 95% {left:125%;opacity:0.2;}
+ 75% {left:125%;opacity:0;}
+ 95% {left:125%;opacity:0;}
  100% {left:50%;opacity:1;}
 }
 
 /*Keyframe animation for slide 3*/
 
 @-webkit-keyframes "slide3Animation" {
- 20% {left:125%;opacity:0.2;}
+ 20% {left:125%;opacity:0;}
  25% {left:50%; opacity:1;}
  45% {left:50%;opacity:1;}
- 50% {left:-25%;opacity:0.2;}
- 70% {left:-25%;opacity:0.2;}
+ 50% {left:-25%;opacity:0;}
+ 70% {left:-25%;opacity:0;}
  75% {left:-125%;opacity:0;}
  80% {left:200%;opacity:0;}
- 95% {left:200%;opacity:0.2;}
- 100% {left:125%;opacity:0.2;}
+ 95% {left:200%;opacity:0;}
+ 100% {left:125%;opacity:0;}
 }
 
 /*Keyframe animation for slide 4*/
 
 @-webkit-keyframes "slide4Animation" {
- 20% {left:200%;opacity:0.2;}
- 25% {left:125%; opacity:0.2;}
- 45% {left:125%;opacity:0.2;}
+ 20% {left:200%;opacity:0;}
+ 25% {left:125%; opacity:0;}
+ 45% {left:125%;opacity:0;}
  50% {left:50%;opacity:1}
  70% {left:50%;opacity:1;}
- 75% {left:-25%;opacity:0.2;}
- 95% {left:-25%;opacity:0.2;}
+ 75% {left:-25%;opacity:0;}
+ 95% {left:-25%;opacity:0}
  100% {left:-100%;opacity:0;}
 }
 
 
 @-webkit-keyframes "slidein" {
  25% {
-   -webkit-transform: scale(1.6) translate3d(-400px, 0px, 0px);
-   transform: scale(1.6) translate3d(-400px, 0px, 0px);
+   -webkit-transform: scale(1.5) translate3d(-300px, 0px, 0px);
+   transform: scale(1.5) translate3d(-300px, 0px, 0px);
  }
  50% {
    -webkit-transform: scale(1) translate3d(0px, 0px, 0px);
    transform: scale(1) translate3d(0px, 0px, 0px);
  }
  75% {
-   -webkit-transform: scale(1.6) translate3d(+400px, 0px, 0px);
-   transform: scale(1.6) translate3d(+400px, 0px, 0px);
+   -webkit-transform: scale(1.5) translate3d(+300px, 0px, 0px);
+   transform: scale(1.5) translate3d(+300px, 0px, 0px);
  }
 }
 
