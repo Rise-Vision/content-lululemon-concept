@@ -251,6 +251,8 @@ td {
 }
 
 
+
+
 @-webkit-keyframes "slidein" {
  25% {
    -webkit-transform: scale(1.5) translate3d(-300px, 0px, 0px);
@@ -266,67 +268,41 @@ td {
  }
 }
 
-/* footer icons */
-#github {
-	 width:20%;
-	 height:4%;
-	 left:10%;
-	 top:90%;
-	 z-index:4;
-	 margin-left:-1%;
-	 position:absolute;
-	 z-index:4;
-}
-	
-#gitbtn {
-	color:white;
-	font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;	
-	text-decoration: none;
-	font-size:25px;
-	opacity:.5;
-	z-index:4;
+
+	@media only screen and (max-width: 800px) {
+	    #logo {
+			width:30%;
+			height:10%;
+			left:3%;
+			top:5%;
+			z-index:1;
+			position:absolute;
+			z-index: 99;
 }
 
-	@media only screen and (min-width: 1280px) {
-	    #gitbtn {
-			font-size:25px;
-	    }
-	}
-	
-	/* 1360x768 */
-	@media only screen and (min-width: 1360px) {
-	    #gitbtn {
-			font-size:24px;
-	    }
-	}
-	
-	/* 1920x1080*/
-	@media only screen and (min-width: 1920px) {	    
-        #gitbtn {
-			font-size: 34px;
-	    }
-	}
-	
-	/* 3840x2160 */
-	@media screen and (min-width: 2200px) {
-	    #gitbtn {
-			font-size: 64px;
-	    }
-	}
-
-#rise {
-	opacity:.5;
-	width:5%;
-	height:4%;
-	left:5%;
-	top:90%;
-	z-index:5;
-	margin-left:-1%;
-	position:absolute;
-	z-index:5;
+		#logo img{
+			width:100%;
+			height:auto;
+			z-index: 99;
+			opacity: .5;
+		}
+		
+		
+		
+		#content {
+    width:50%;
+    height:50%;
+    left:-50%;
+    top:10vw;
+    z-index:3;
+    position:absolute;
+	-webkit-transform: translateZ(0);
 }
+	}
+	
+@media screen and (max-width: 300px) {
+    body {
+        background-color: lightblue;
+    }
+}	
 
-#risebtn {
-    width:auto; 
-    height:100%;   
-}
