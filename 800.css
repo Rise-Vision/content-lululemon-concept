@@ -6,12 +6,16 @@ rn of text highlight*/
 html {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
+	background-color: #323341;
+	
 }
 
 body {
 	font-family: 'Oswald', sans-serif;
 	font-size:2vw;
 	background-color: #323341;
+
+	
 }
 
 /* header text */
@@ -91,13 +95,14 @@ td {
 
 
 #logo {
-    width:30%;
+    width:80%;
     height:10%;
-    left:3%;
+    left:5%;
     top:5%;
     z-index:1;
     position:absolute;
 	z-index: 99;
+	background-color: green;
 }
 
 #logo img{
@@ -138,18 +143,19 @@ td {
 }
 
 #background {
-	overflow: hidden;
-	position: relative;
-	text-align: center;
-	opacity:.25;
+
+	position: absolute;
+	top:0;
+	left:0;
+background-image: url(images/mobile-bg2.jpg);
+	
+	
 	
 }
 
 #background img {
-	-webkit-animation-duration: 205s;
-    -webkit-animation-name: slidein;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-direction: alternate;
+    display:none;
+	
 }
 
 
@@ -242,5 +248,3 @@ td {
  }
 }
 
-
-	
