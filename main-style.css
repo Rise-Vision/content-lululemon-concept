@@ -148,34 +148,48 @@ td {
 /*Slide starting position at right hand side*/
 .slides:first-of-type {
 	opacity: 0;
-	-webkit-animation: bounceInRight 50s 0s ease infinite;
+	-webkit-animation: bounceInRight 70s 0s ease infinite;
 	-webkit-animation-fill-mode: forwards;
 }
 
 /*Slide starting position at left hand side*/
 .slides:nth-of-type(2n) {
 	opacity: 0;
-	-webkit-animation: bounceInRight 50s 10s ease infinite;
+	-webkit-animation: bounceInRight 70s 10s ease infinite;
 	-webkit-animation-fill-mode: forwards;	
 }
 
 /*Slide starting position at left hand side*/
 .slides:nth-of-type(3n) {
 	opacity: 0;
-	-webkit-animation: bounceInRight 50s 20s ease infinite;
+	-webkit-animation: bounceInRight 70s 20s ease infinite;
 	-webkit-animation-fill-mode: forwards;
 }
 
 /*Slide starting position at left hand side*/
 .slides:nth-of-type(4n) {
 	opacity: 0;
-	-webkit-animation: bounceInRight 50s 30s ease infinite;
+	-webkit-animation: bounceInRight 70s 30s ease infinite;
+	-webkit-animation-fill-mode: forwards;
+}
+
+/*Slide starting position at left hand side*/
+.slides:nth-of-type(5n) {
+	opacity: 0;
+	-webkit-animation: bounceInRight 70s 40s ease infinite;
+	-webkit-animation-fill-mode: forwards;
+}
+
+/*Slide starting position at left hand side*/
+.slides:nth-of-type(6n) {
+	opacity: 0;
+	-webkit-animation: bounceInRight 70s 50s ease infinite;
 	-webkit-animation-fill-mode: forwards;
 }
 
 .slides:last-of-type {
 	opacity: 0;
-	-webkit-animation: bounceInRight 50s 40s ease infinite;
+	-webkit-animation: bounceInRight 50s 60s ease infinite;
 	-webkit-animation-fill-mode: forwards;
 }
 
@@ -192,11 +206,11 @@ td {
     -webkit-transform: translate3d(0px, 0, 0);
   }
 
-  19% {
+  14% {
 	 opacity: 1;
   }
 	
-	20% {
+	15% {
 	opacity: 0;
   }
 	
