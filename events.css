@@ -68,6 +68,7 @@ td {
 
 .opacity {
 	color: #b9c0d0;
+	font-size:3vw;
 }
 
 .cost {
@@ -86,50 +87,7 @@ td {
 	padding-top:2vw;
 }
 
-.slides {
-	width:75%;
-	height:auto;
-	position: absolute;
-	left:50%;
-	top:50%;
-	transform:translate(-50%, -50%);
-	z-index: 6;
-	text-align: center;
-	padding: 20px;
-	color: rgba(255,255,255,1);
-	-webkit-transform:translate(-50%, -50%);
-	-webkit-animation: slide2Animation 30s ease-in-out infinite;
-}
 
-
-/*Slide starting position at right hand side*/
-
-.slides:first-of-type {
-	left:125%;
-	opacity:0;
-	-webkit-animation: slide3Animation 30s ease-in-out infinite;
-	-webkit-perspective: 1000;
-}
-
-/*Slide starting position at left hand side*/
-
-.slides:nth-of-type(3n) {
-	left:-25%;
-	opacity: 0;
-	-webkit-animation: slide1Animation 30s ease-in-out infinite;
-	-webkit-perspective: 1000;
-	
-}
-/*.slides:nth-of-type(4n) {
-}*/
-
-/*Slide starting position off screen*/
-
-.slides:last-of-type {
-	left:200%;
-	-webkit-animation: slide4Animation 30s ease-in-out infinite;
-	-webkit-perspective: 1000;
-}
 
 
 #logo {
@@ -195,62 +153,79 @@ td {
 	-webkit-animation-direction: alternate;
 }
 
-/*Keyframe animation for slide 1*/
 
-@-webkit-keyframes "slide1Animation" {
- 20% {left:-25%;opacity:0;}
- 25% {left:-100%; opacity:0;}
- 40% {left:-100%;opacity:0}
- 45% {left:200%;opacity:0}
- 50% {left:125%;opacity:0;}
- 70% {left:125%;opacity:0;}
- 75% {left:50%;opacity:1;}
- 95% {left:50%;opacity:1;}
- 100% {left:-25%;opacity:0;}
+.slides {
+	width:80%;
+	height:auto;
+	position: absolute;
+	left:10vw;
+	top:-40%;
+	z-index: 6;
+	text-align: center;
+	padding: 20px;
+	color: rgba(255,255,255,1);
+	opacity:0;	
 }
 
-/*Keyframe animation for slide 2*/
-
-@-webkit-keyframes "slide2Animation" {
- 20% {left:50%;opacity:1;}
- 25% {left:-25%; opacity:0;}
- 45% {left:-25%;opacity:0;}
- 50% {left:-100%;opacity:0;}
- 55% {left:-100%;opacity:0;}
- 70% {left:200%;opacity:0;}
- 75% {left:125%;opacity:0;}
- 95% {left:125%;opacity:0;}
- 100% {left:50%;opacity:1;}
+/*Slide starting position at right hand side*/
+.slides:first-of-type {
+	opacity: 0;
+	-webkit-animation: bounceInRight 50s 0s ease infinite;
+	-webkit-animation-fill-mode: forwards;
 }
 
-/*Keyframe animation for slide 3*/
-
-@-webkit-keyframes "slide3Animation" {
- 20% {left:125%;opacity:0;}
- 25% {left:50%; opacity:1;}
- 45% {left:50%;opacity:1;}
- 50% {left:-25%;opacity:0;}
- 70% {left:-25%;opacity:0;}
- 75% {left:-125%;opacity:0;}
- 80% {left:200%;opacity:0;}
- 95% {left:200%;opacity:0;}
- 100% {left:125%;opacity:0;}
+/*Slide starting position at left hand side*/
+.slides:nth-of-type(2n) {
+	opacity: 0;
+	-webkit-animation: bounceInRight 50s 10s ease infinite;
+	-webkit-animation-fill-mode: forwards;	
 }
 
-/*Keyframe animation for slide 4*/
-
-@-webkit-keyframes "slide4Animation" {
- 20% {left:200%;opacity:0;}
- 25% {left:125%; opacity:0;}
- 45% {left:125%;opacity:0;}
- 50% {left:50%;opacity:1}
- 70% {left:50%;opacity:1;}
- 75% {left:-25%;opacity:0;}
- 95% {left:-25%;opacity:0}
- 100% {left:-100%;opacity:0;}
+/*Slide starting position at left hand side*/
+.slides:nth-of-type(3n) {
+	opacity: 0;
+	-webkit-animation: bounceInRight 50s 20s ease infinite;
+	-webkit-animation-fill-mode: forwards;
 }
 
+/*Slide starting position at left hand side*/
+.slides:nth-of-type(4n) {
+	opacity: 0;
+	-webkit-animation: bounceInRight 50s 30s ease infinite;
+	-webkit-animation-fill-mode: forwards;
+}
 
+.slides:last-of-type {
+	opacity: 0;
+	-webkit-animation: bounceInRight 50s 40s ease infinite;
+	-webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bounceInRight {
+
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+  }
+
+  1% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 0, 0);
+  }
+
+  19% {
+	 opacity: 1;
+  }
+	
+	20% {
+	opacity: 0;
+  }
+	
+	100% {
+	opacity: 0;
+  }
+}
 
 
 @-webkit-keyframes "slidein" {
@@ -269,40 +244,58 @@ td {
 }
 
 
-	@media only screen and (max-width: 800px) {
-	    #logo {
-			width:30%;
-			height:10%;
-			left:3%;
-			top:5%;
-			z-index:1;
-			position:absolute;
-			z-index: 99;
-}
-
-		#logo img{
-			width:100%;
-			height:auto;
-			z-index: 99;
-			opacity: .5;
-		}
-		
-		
-		
-		#content {
-    width:50%;
-    height:50%;
-    left:-50%;
-    top:10vw;
-    z-index:3;
-    position:absolute;
-	-webkit-transform: translateZ(0);
-}
-	}
+	/* iPhone 6 (landscape) ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
 	
-@media screen and (max-width: 300px) {
-    body {
-        background-color: lightblue;
-    }
-}	
+	#logo {
+    width:30%;
+    height:10%;
+    left:3%;
+    top:5%;
+    z-index:1;
+    position:absolute;
+	z-index: 99;
+}
 
+#logo img{
+    width:100%;
+    height:auto;
+	z-index: 99;
+}
+	
+
+
+}
+
+/* iPhone 6 (portrait) ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+	
+	#logo {
+    width:80%;
+    height:10%;
+    left:10%;
+    top:5%;
+    z-index:1;
+    position:absolute;
+	z-index: 99;
+}
+
+#logo img{
+    width:100%;
+    height:auto;
+	z-index: 99;
+}
+
+	.slides {
+	width:80%;
+	height:auto;
+	position: absolute;
+	left:10vw;
+	top:10%;
+	z-index: 6;
+	text-align: center;
+	padding: 20px;
+	color: rgba(255,255,255,1);
+	opacity:0;	
+}
+}
