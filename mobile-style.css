@@ -10,7 +10,7 @@ html {
 
 body {
 	font-family: 'Oswald', sans-serif;
-	font-size:2vw;
+	font-size:5vw;
 	background-color: #323341;
 }
 
@@ -44,9 +44,9 @@ body {
 
 table {
 	color:white;
-	font-size:3vw;
+	font-size:5vw;
 	font-weight: 300;
-	line-height: 3vw;
+	line-height: 5vw;
 	
 }
 
@@ -56,34 +56,34 @@ td {
 
 .event {
 	padding-top:10vw;
-	font-size:6vw;
+	font-size:8vw;
 	font-weight: 700;
 }
 
 .desc {
-	font-size:3vw;
-	line-height: 3.5vw;
+	font-size:5vw;
+	line-height: 5.5vw;
 	padding-bottom:2vw;
 }
 
 .opacity {
 	color: #b9c0d0;
-	font-size:3vw;
+	font-size:5vw;
 }
 
 .cost {
-	font-size:3vw;
+	font-size:5vw;
 	font-weight: 300;
 }
 
 .type {
-	font-size:3vw;
+	font-size:5vw;
 	font-weight: 300;
 }
 
 
 .website {
-	font-size:3vw;
+	font-size:5vw;
 	padding-top:2vw;
 }
 
@@ -91,9 +91,9 @@ td {
 
 
 #logo {
-    width:30%;
+    width:90%;
     height:10%;
-    left:3%;
+    left:5%;
     top:5%;
     z-index:1;
     position:absolute;
@@ -141,15 +141,12 @@ td {
 	overflow: hidden;
 	position: relative;
 	text-align: center;
-	opacity:.25;
 	
 }
 
 #background img {
-	-webkit-animation-duration: 205s;
-    -webkit-animation-name: slidein;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-direction: alternate;
+	height: 150%;
+	width: 150%
 }
 
 
@@ -158,7 +155,7 @@ td {
 	height:auto;
 	position: absolute;
 	left:10vw;
-	top:-40%;
+	top:10vh;
 	z-index: 6;
 	text-align: center;
 	padding: 20px;
@@ -205,12 +202,12 @@ td {
 
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(3000px, 0, 0);
+    
   }
 
   1% {
     opacity: 1;
-    -webkit-transform: translate3d(0px, 0, 0);
+    
   }
 
   19% {
